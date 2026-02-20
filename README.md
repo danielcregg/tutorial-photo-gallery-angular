@@ -1,35 +1,80 @@
-# Build Your First Ionic App: Photo Gallery (Ionic Angular and Capacitor)
+# Tutorial Photo Gallery - Ionic Angular
 
-Get started with Ionic by building a photo gallery app that runs on iOS, Android, and the web - with just one codebase. This is the complete project referenced in the ["Your First App: Angular" guide](https://ionicframework.com/docs/angular/your-first-app). Follow along to create a complete CRUD (create-read-update-delete) experience.
+![Ionic](https://img.shields.io/badge/Ionic-3880FF?style=flat-square&logo=ionic&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=flat-square&logo=capacitor&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
-Powered by [Ionic Angular](https://ionicframework.com/docs/angular/overview) (web app) and [Capacitor](https://capacitor.ionicframework.com) (native app runtime).
+A cross-platform photo gallery application built with Ionic, Angular, and Capacitor that runs on iOS, Android, and the web from a single codebase.
 
-## How It Works
+> **Note:** This repository is a fork of [ionic-team/tutorial-photo-gallery-angular](https://github.com/ionic-team/tutorial-photo-gallery-angular).
 
-After the user navigates to Tab 2 (Photos), they can tap/click on the camera button to open up the device's camera. After taking or selecting a photo, it's stored permanently into the device's filesystem. When the user reopens the app at a later time, the photo images are loaded from the filesystem and displayed again in the gallery. The user can tap on a photo to be presented with the option to remove the photo.
+## Overview
 
-## Feature Overview
-* App framework: [Angular](https://angular.io)
-* UI components: [Ionic Framework](https://ionicframework.com/docs/components)
-  * Camera button: [Floating Action Button (FAB)](https://ionicframework.com/docs/api/fab)
-  * Photo Gallery display: [Grid](https://ionicframework.com/docs/api/grid)
-  * Delete Photo dialog: [Action Sheet](https://ionicframework.com/docs/api/action-sheet) 
-* Native runtime: [Capacitor](https://capacitor.ionicframework.com)
-  * Taking photos: [Camera API](https://capacitor.ionicframework.com/docs/apis/camera)
-  * Writing photo to the filesystem: [Filesystem API](https://capacitor.ionicframework.com/docs/apis/filesystem)
-  * Storing photo gallery metadata: [Preferences API](https://capacitor.ionicframework.com/docs/apis/preferences)
+This project is the companion application for the official Ionic Framework ["Your First App: Angular"](https://ionicframework.com/docs/angular/your-first-app) tutorial. It demonstrates a complete CRUD workflow where users can capture photos using the device camera, persist them to the filesystem, display them in a gallery grid, and delete individual photos. The app leverages Capacitor's native APIs to provide a consistent experience across web browsers and mobile platforms.
 
-## Project Structure
-* Tab2 (Photos) (`src/app/tab2/`): Photo Gallery UI and basic logic.
-* PhotoService (`src/app/services/photo.service.ts`): Logic encapsulating Capacitor APIs, including Camera, Filesystem, and Preferences.
+## Features
 
-## How to Run
+- **Camera Integration** -- Capture photos directly from the device camera using the Capacitor Camera API
+- **Persistent Storage** -- Save photos to the device filesystem with automatic reload on app restart
+- **Photo Gallery Grid** -- Display captured images in a responsive grid layout
+- **Delete Photos** -- Remove photos via an action sheet dialog with filesystem cleanup
+- **Cross-Platform** -- Single codebase that runs on iOS, Android, and the web
+- **Tab-Based Navigation** -- Clean tab interface built with Ionic UI components
 
-> Note: It's highly recommended to follow along with the [tutorial guide](https://ionicframework.com/docs/angular/your-first-app), which goes into more depth, but this is the fastest way to run the app. 
+## Prerequisites
 
-0) Install Ionic if needed: `npm install -g @ionic/cli`.
-1) Clone this repository.
-2) In a terminal, change directory into the repo: `cd photo-gallery-capacitor-ng`.
-3) Install all packages: `npm install`.
-4) Run on the web: `ionic serve`.
-5) Run on iOS or Android: See [here](https://ionicframework.com/docs/building/running).
+- **Node.js** 14 or higher
+- **npm** 6 or higher
+- **Ionic CLI** (`npm install -g @ionic/cli`)
+- **Xcode** (for iOS development)
+- **Android Studio** (for Android development)
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/danielcregg/tutorial-photo-gallery-angular.git
+   cd tutorial-photo-gallery-angular
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Usage
+
+Run the app in a web browser:
+```bash
+ionic serve
+```
+
+Run on iOS:
+```bash
+ionic cap run ios
+```
+
+Run on Android:
+```bash
+ionic cap run android
+```
+
+For a more detailed walkthrough, refer to the official [Ionic tutorial guide](https://ionicframework.com/docs/angular/your-first-app).
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Angular 12 | Application framework |
+| Ionic Framework 5 | UI component library |
+| Capacitor 4 | Native runtime for cross-platform deployment |
+| TypeScript | Type-safe application logic |
+| SCSS | Component styling |
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
